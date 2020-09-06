@@ -1,0 +1,24 @@
+This C++ code went into visual studio. This is just beginners code to get familiarized with the multiple functions of C++ and its language. This code will let you enter one number and then it'll sum up all the individual numbers in your multiple digit number to create the sum of each number added up.
+Ex. 450= 9
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+	int num;
+	int sum;
+	int result;
+
+	sum = 0;
+	cout << "Enter a number ";
+	cin >> num;
+	sum = (sum + num % 10);
+	result = (num / 10);
+	sum = (sum + result % 10);
+	num = (result / 10);
+	sum = (sum +num % 10);
+
+	cout << "Sum of digits is " << sum;
+}
