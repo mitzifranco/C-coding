@@ -1,0 +1,31 @@
+This C++ code allows the user to enter its salary which then shows them how much taxes they are going to have to pay based on their income
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int salary, taxes;
+	cout << "Enter your salary to the nearest dollar : ";
+	cin >> salary;
+			if (salary <= 9525) {
+				taxes = (salary * .10);
+			}
+			else if (salary > 9525 && salary <= 38700) {
+				taxes=((salary - 9525) * .12) + 952;
+			}
+			else if (salary > 38700 && salary <= 82500) {
+				taxes = ((salary - 38700) * .22) + 3501 + 952;
+			}
+			else if (salary > 82500 && salary <= 157500) {
+				taxes = ((salary - 82500) * .24) + 9636 + 3501 + 952;
+			}
+			else if (salary > 157700 && salary <= 200000) {
+				taxes = ((salary - 157700) * .32) + 13600 + 9636 + 3501 + 952;
+			}
+			else if (salary > 200000 && salary <= 500000) {
+				taxes = ((salary - 200000) * .35) + 33600 + 13600 + 9636 + 3501 + 952;
+			}
+		cout << "Total tax owed is " << taxes << endl;
+
+}
