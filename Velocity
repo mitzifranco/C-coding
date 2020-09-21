@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int x, y, xVelocity, yVelocity;
+		cout << "Enter the starting x postion ";
+	cin >> x;
+		cout << "Enter the starting y position ";
+	cin >> y;
+	cout << "Enter the starting x velocity ";
+	cin >> xVelocity;
+		cout << "Enter the starting y velocity ";
+		cin >> yVelocity;
+
+		while(x >= 0 && x < 100 && y >= 0 && y < 100)
+	{
+			cout << "x : " << x << " and y : " << y << endl;
+			x += xVelocity;
+			y += yVelocity;
+	}
+
+}
