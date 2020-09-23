@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	double principle, annual_add, grow;
+		double inter_percent, year, total_money;
+	cout << "Enter the principle : ";
+	cin >> principle;
+	cout << "Enter the annual addition ";
+	cin >> annual_add;
+	cout << "Enter the number of years to grow : ";
+	cin >> grow;
+	cout << "Enter the interest rate as a percentage : ";
+	cin >> inter_percent;
+	inter_percent = inter_percent / 100;
+	year = 0;
+
+	for(year = 1; year <= grow; year+=1)
+	{
+			principle = principle + annual_add;
+			principle = (principle * inter_percent)+ principle;
+			cout << "Year " << year << ": " << principle << endl;
+	}
+}
